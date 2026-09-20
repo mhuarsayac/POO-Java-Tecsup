@@ -21,11 +21,11 @@ public class ElectrodomesticoCocina extends Electrodomestico implements IEncendi
 
     @Override
     public void encender() {
-
+        System.out.println("El electrodomestico de cocina se ha encendido.");
     }
 
     @Override
     public void apagar() {
-
+        System.out.println("El electrodomestico de cocina se ha apagado.");
     }
 }

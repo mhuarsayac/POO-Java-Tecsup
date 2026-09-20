@@ -20,11 +20,11 @@ public class ElectrodomesticoEntretenimiento extends Electrodomestico implements
 
     @Override
     public void encender() {
-
+        System.out.println("El electrodomestico de entretenimiento se ha encendido.");
     }
 
     @Override
     public void apagar() {
-
+        System.out.println("El electrodomestico de entretenimiento se ha apagado.");
     }
 }
