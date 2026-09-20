@@ -1,22 +1,22 @@
 public class ElectrodomesticoCocina extends Electrodomestico implements IEncendible{
-    private int cantidadDias;
+    private int cantidadDiasUsadas;
 
-    public ElectrodomesticoCocina(String nombre, int cantidadHoras, float consumoEnergiaPorHora, int cantidadDias) {
-        super(nombre, cantidadHoras, consumoEnergiaPorHora);
-        this.cantidadDias = cantidadDias;
+    public ElectrodomesticoCocina(String nombre, int cantidadHorasUsadas, float consumoEnergiaPorHora, int cantidadDias) {
+        super(nombre, cantidadHorasUsadas, consumoEnergiaPorHora);
+        this.cantidadDiasUsadas = cantidadDias;
     }
 
-    public int getCantidadDias() {
-        return cantidadDias;
+    public int getCantidadDiasUsadas() {
+        return cantidadDiasUsadas;
     }
 
-    public void setCantidadDias(int cantidadDias) {
-        this.cantidadDias = cantidadDias;
+    public void setCantidadDiasUsadas(int cantidadDiasUsadas) {
+        this.cantidadDiasUsadas = cantidadDiasUsadas;
     }
 
     @Override
     public float calcularConsumoSemanal() {
-        return super.calcularConsumoSemanal();
+        return super.calcularConsumoSemanal()*cantidadDiasUsadas;
     }
 
     @Override

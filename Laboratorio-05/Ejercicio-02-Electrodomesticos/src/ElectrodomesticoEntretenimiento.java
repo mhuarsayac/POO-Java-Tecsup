@@ -1,8 +1,8 @@
 public class ElectrodomesticoEntretenimiento extends Electrodomestico implements IEncendible{
     private int cantidadPersonas;
 
-    public ElectrodomesticoEntretenimiento(String nombre, int cantidadHoras, float consumoEnergiaPorHora) {
-        super(nombre, cantidadHoras, consumoEnergiaPorHora);
+    public ElectrodomesticoEntretenimiento(String nombre, int cantidadHorasUsadas, float consumoEnergiaPorHora) {
+        super(nombre, cantidadHorasUsadas, consumoEnergiaPorHora);
     }
 
     public int getCantidadPersonas() {
@@ -15,7 +15,7 @@ public class ElectrodomesticoEntretenimiento extends Electrodomestico implements
 
     @Override
     public float calcularConsumoSemanal() {
-        return super.calcularConsumoSemanal();
+        return super.calcularConsumoSemanal()*7;
     }
 
     @Override

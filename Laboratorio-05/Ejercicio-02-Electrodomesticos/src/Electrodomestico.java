@@ -1,11 +1,11 @@
 public class Electrodomestico implements IEncendible{
     protected String nombre;
-    protected int cantidadHoras;
+    protected int cantidadHorasUsadas;
     protected float consumoEnergiaPorHora;
 
-    public Electrodomestico(String nombre, int cantidadHoras, float consumoEnergiaPorHora) {
+    public Electrodomestico(String nombre, int cantidadHorasUsadas, float consumoEnergiaPorHora) {
         this.nombre = nombre;
-        this.cantidadHoras = cantidadHoras;
+        this.cantidadHorasUsadas = cantidadHorasUsadas;
         this.consumoEnergiaPorHora = consumoEnergiaPorHora;
     }
 
@@ -17,12 +17,12 @@ public class Electrodomestico implements IEncendible{
         this.nombre = nombre;
     }
 
-    public int getCantidadHoras() {
-        return cantidadHoras;
+    public int getCantidadHorasUsadas() {
+        return cantidadHorasUsadas;
     }
 
-    public void setCantidadHoras(int cantidadHoras) {
-        this.cantidadHoras = cantidadHoras;
+    public void setCantidadHorasUsadas(int cantidadHorasUsadas) {
+        this.cantidadHorasUsadas = cantidadHorasUsadas;
     }
 
     public float getConsumoEnergiaPorHora() {
@@ -37,13 +37,13 @@ public class Electrodomestico implements IEncendible{
     public String toString() {
         return "Electrodomestico{" +
                 "nombre='" + nombre + '\'' +
-                ", cantidadHoras=" + cantidadHoras +
+                ", cantidadHoras=" + cantidadHorasUsadas +
                 ", consumoEnergiaPorHora=" + consumoEnergiaPorHora +
                 '}';
     }
 
     public float calcularConsumoSemanal(){
-        return 0;
+        return consumoEnergiaPorHora*cantidadHorasUsadas;
     }
 
     @Override
