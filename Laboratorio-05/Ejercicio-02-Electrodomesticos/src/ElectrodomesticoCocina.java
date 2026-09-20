@@ -1,4 +1,4 @@
-public class ElectrodomesticoCocina extends Electrodomestico {
+public class ElectrodomesticoCocina extends Electrodomestico implements IEncendible{
     private int cantidadDias;
 
     public ElectrodomesticoCocina(String nombre, int cantidadHoras, float consumoEnergiaPorHora, int cantidadDias) {
@@ -17,5 +17,15 @@ public class ElectrodomesticoCocina extends Electrodomestico {
     @Override
     public float calcularConsumoSemanal() {
         return super.calcularConsumoSemanal();
+    }
+
+    @Override
+    public void encender() {
+
+    }
+
+    @Override
+    public void apagar() {
+
     }
 }

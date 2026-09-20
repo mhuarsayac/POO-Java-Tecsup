@@ -1,4 +1,4 @@
-public class Electrodomestico {
+public class Electrodomestico implements IEncendible{
     protected String nombre;
     protected int cantidadHoras;
     protected float consumoEnergiaPorHora;
@@ -44,5 +44,15 @@ public class Electrodomestico {
 
     public float calcularConsumoSemanal(){
         return 0;
+    }
+
+    @Override
+    public void encender() {
+
+    }
+
+    @Override
+    public void apagar() {
+
     }
 }
